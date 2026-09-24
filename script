@@ -117,22 +117,21 @@ echo " 0 size files are deleted"
 fi
 ------------------------------------------------------------------------------------------------
 PROGRAM 7:  
-SHELL SCRIPT TO FIND SUM OF INDIVIDUAL DIGITS
-echo "enter a number"
+
+
+echo "Enter a number:"
 read n
+
 sum=0
-while [ $n -gt 0 ] || [ $sum -gt 9 ]
+
+while [ $n -gt 0 ]
 do
-  if [ $n -eq 0 ]
-  then
-    n=$sum
-    sum=0
-  fi
-  sd=$((n%10))
-  n=$((n/10))
-  sum=$((sum+sd))
+    digit=$((n % 10))
+    sum=$((sum + digit))
+    n=$((n / 10))
 done
-echo "the sum of the digits = $sum"
+
+echo "Sum of individual digits = $sum"
 ---------------------------------------------------------------------------------------
 PROGRAM  8: 
    Shell Script to find greatest among the given number using command  line  argument.
